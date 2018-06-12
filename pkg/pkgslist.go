@@ -3,7 +3,7 @@
 // packages` for more info).
 //
 // Much of the code was adapted from the cmd/go matchPackages func.
-package pkgs
+package pkgslist
 
 import (
 	"go/build"

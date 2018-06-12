@@ -1,4 +1,4 @@
-package pkgs
+package pkgslist
 
 import (
 	"go/build"
@@ -10,19 +10,19 @@ import (
 
 func TestFindAll(t *testing.T) {
 	tests := map[string][]*build.Package{
-		"": []*build.Package{
+		"": {
 			{ImportPath: "a"},
 			{ImportPath: "b"},
 			{ImportPath: "b/c"},
 		},
-		"a": []*build.Package{
+		"a": {
 			{ImportPath: "a"},
 		},
-		"b": []*build.Package{
+		"b": {
 			{ImportPath: "b"},
 			{ImportPath: "b/c"},
 		},
-		"x": []*build.Package{},
+		"x": {},
 	}
 
 	buildContext := build.Default
